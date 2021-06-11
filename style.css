@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Courgette&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+}
+.body {
+    background: url('Images/snake.jpg');
+    min-height: 100vh;
+    background-size: 100vw 100vh;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#board {
+    background: linear-gradient(rgb(159, 241, 159), rgb(238, 238, 170));
+    height: 91vh;
+    width: 91vh;
+    border: 2px solid black;
+    display: grid;
+    grid-template-rows: repeat(18, 1fr);
+    grid-template-columns: repeat(18, 1fr);
+}
+
+.head {
+    background : linear-gradient(red,green) ;
+    border-radius: 32px;
+    border : 2px solid black;
+}
+
+.snake {
+    background-color: rgb(192, 11, 192);
+    border-radius: 12px;
+    border : 2px solid white;
+}
+
+.food {
+    background : linear-gradient(rgb(233, 145, 145),rgb(52, 187, 250)) ;
+    border-radius: 32px;
+    border : 2px solid black;
+}
+
+#score {
+    position: absolute;
+    top:4%;
+    right:10%;
+    font-size: 2rem;
+    font-weight: bold;
+    font-family: 'Courgette', cursive;
+}
+/* #hiscoreBox {
+    position: absolute;
+    top:9%;
+    right:10%;
+    font-size: 2rem;
+    font-weight: bold;
+    font-family: 'Courgette', cursive;
+} */
