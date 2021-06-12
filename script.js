@@ -3,13 +3,14 @@ const foodSound = new Audio('Music/food.mp3');
 const gameOverSound = new Audio('Music/gameover.mp3');
 const moveSound = new Audio('Music/move.mp3');
 const musicSound = new Audio('Music/music.mp3');
-let speed = 6;
+let speed = 4;
 let lastPaintTime = 0;
 let snakeArr = [
     { x: 13, y: 15 }
 ];
 let foodItem = { x: 6, y: 7 };
 let scorePoint = 0;
+let f=1;
 
 // Game functions
 
@@ -57,6 +58,10 @@ function gameEngine() {
     if (snakeArr[0].y === foodItem.y && snakeArr[0].x === foodItem.x) {
         scorePoint += 10;
         score.innerHTML = "Score :" + scorePoint;
+        if(scorePoint >= f*50){
+            speed+=2;
+            f++;
+        }
         // if (scorePoint > hiscoreval) {
         //     // console.log("hello high score");
         //     hiscoreval = scorePoint;
