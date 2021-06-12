@@ -10,7 +10,7 @@ let snakeArr = [
 ];
 let foodItem = { x: 6, y: 7 };
 let scorePoint = 0;
-let f=1;
+let f = 1;
 
 // Game functions
 
@@ -50,6 +50,8 @@ function gameEngine() {
         }];
         musicSound.play();
         scorePoint = 0;
+        speed = 4;
+        f = 1;
         score.innerHTML = "Score :" + 0;
     }
 
@@ -58,8 +60,8 @@ function gameEngine() {
     if (snakeArr[0].y === foodItem.y && snakeArr[0].x === foodItem.x) {
         scorePoint += 10;
         score.innerHTML = "Score :" + scorePoint;
-        if(scorePoint >= f*50){
-            speed+=2;
+        if (scorePoint >= f * 50) {
+            speed += 2;
             f++;
         }
         // if (scorePoint > hiscoreval) {
